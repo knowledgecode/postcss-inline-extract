@@ -1,0 +1,57 @@
+{
+  "name": "postcss-inline-extract",
+  "version": "0.1.0",
+  "description": "PostCSS plugin to extract inline styles from HTML and convert them to CSS rules",
+  "keywords": [
+    "postcss-plugin",
+    "css",
+    "inline-styles",
+    "extract",
+    "html",
+    "style-attributes"
+  ],
+  "license": "MIT",
+  "author": "KNOWLEDGECODE",
+  "homepage": "https://github.com/KNOWLEDGECODE/postcss-inline-extract#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KNOWLEDGECODE/postcss-inline-extract.git"
+  },
+  "bugs": {
+    "url": "https://github.com/KNOWLEDGECODE/postcss-inline-extract/issues"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "commonjs",
+  "files": [
+    "dist/**/*",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "rollup -c && tsc",
+    "build-watch": "concurrently --kill-others \"rollup -c --watch\" \"tsc --watch\"",
+    "lint": "eslint",
+    "prepublishOnly": "npm run build",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "test:coverage": "vitest run --coverage"
+  },
+  "peerDependencies": {
+    "postcss": "^8.0.0"
+  },
+  "dependencies": {
+    "node-html-parser": "^7.0.1"
+  },
+  "devDependencies": {
+    "@vitest/coverage-v8": "^3.2.4",
+    "concurrently": "^9.2.0",
+    "eslint": "^9.33.0",
+    "postcss": "^8.5.6",
+    "rollup": "^4.46.3",
+    "rollup-plugin-esbuild": "^6.2.1",
+    "typescript": "^5.9.2",
+    "typescript-eslint": "^8.40.0",
+    "vitest": "^3.2.4"
+  }
+}
